@@ -70,10 +70,26 @@ namespace lab_2
 
         static void Main(string[] args)
         {
-            string str1 = "тестуваннятест";
-            string str2 = "тест";
+            string str1, str2;
+
+            Console.Write("Input first string ");
+            str1 = Console.ReadLine();
+            
+            while (true)
+            {
+                Console.Write("Input Second string, it must be smaller or equal first string ");
+                str2 = Console.ReadLine();
+                if (str2.Length > str1.Length)
+                {
+                    Console.WriteLine("Error!");
+                }
+                else
+                {
+                    break;
+                }
+            }
             Console.WriteLine(MyContains(str1, str2));
-            Replace(str1, str2);
+            Console.WriteLine(Replace(str1, str2));
             Console.WriteLine(Amount(str1, str2));
 
         }
